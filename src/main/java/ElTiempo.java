@@ -13,7 +13,7 @@ public class ElTiempo {
         Elements miElemento= doc.getElementsByClass("today_nowcard-temp");
         //Element misElemento= doc.getElementsByClass("div class=today_nowcard-phrase").first();
         String miTexto=miElemento.text();
-                System.out.println(miElemento);
+                System.out.println(miTexto);
     }
 
 }
