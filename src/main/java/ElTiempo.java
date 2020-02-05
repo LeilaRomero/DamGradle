@@ -11,9 +11,11 @@ public class ElTiempo {
 
         Document doc = Jsoup.connect("https://weather.com/es-ES/tiempo/hoy/l/SPXX0084:1:SP").userAgent("Mozilla").get();
         Elements miElemento= doc.getElementsByClass("today_nowcard-temp");
-        //Element misElemento= doc.getElementsByClass("div class=today_nowcard-phrase").first();
+        Elements misElemento= doc.getElementsByClass("today_nowcard-phrase");
+        String misElementos= doc.title();
         String miTexto=miElemento.text();
-                System.out.println(miTexto);
+        String misTextos=misElemento.text();
+                System.out.println("La página es"+ "La temperaturaes de:" +miTexto+ " "+misTextos);
     }
 
 }
